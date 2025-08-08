@@ -4,4 +4,7 @@ class Departamento():
         self.name = name
 
     def show(self): 
-        print(f'ID: {self.id}, Nombre: {self.name}')
+        """
+        Metodo para imprimir los atributos del objeto departamento
+        """
+        print(f'\n ID: {self.id}, Nombre: {self.name}')
