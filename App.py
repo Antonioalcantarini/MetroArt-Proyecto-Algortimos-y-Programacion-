@@ -134,7 +134,7 @@ class App():
                                 apellido_artista = input("\nIndicar el apellido del artista cuyas obras desea buscar: ")
                                 while not apellido_artista.isalpha(): 
                                     apellido_artista = input("\nPor favor, no introduzca valores numéricos o espacios en el apellido: ")
-                                nombre_completo_1 = nombre_artista + " " + apellido_artista
+                                nombre_completo_1 = nombre_artista.capitalize() + " " + apellido_artista.capitalize()
                                 for obra in self.obras: 
                                     if nombre_completo_1 == obra.nombre_artista:
                                         encontrado_nombre = True
@@ -154,7 +154,7 @@ class App():
                                 apellido_2 = input("\nIndicar el segundo apellido del artista cuyas obras desea buscar: ")
                                 while not apellido_2.isalpha(): 
                                     apellido_2 = input("\nPor favor, no introduzca valores numéricos o espacios en el apellido: ")
-                                nombre_completo_2 = nombre_artista + " " + apellido_1 + " " + apellido_2
+                                nombre_completo_2 = nombre_artista.capitalize() + " " + apellido_1.capitalize() + " " + apellido_2.capitalize()
                                 for obra in self.obras: 
                                     if nombre_completo_2 == obra.nombre_artista: 
                                         #Se llama al método .Show_busqueda() de la clase Obra
@@ -166,7 +166,9 @@ class App():
 
                         # Salida del módulo de Búsqueda
                         if opcion_seleccionada == 3: 
+                            print()
                             break
+                            
             
             #Módulo 3: Mostrar detalles de la obra
             if opcion_escogida == 2: 
